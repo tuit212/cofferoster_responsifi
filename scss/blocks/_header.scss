@@ -1,0 +1,132 @@
+.site-header{
+    padding: 44px 0;
+}
+.header{
+    @include center (space-between);
+}
+.header__logo-link{
+    display: inline-block;
+}
+.header__list{
+    @include center (none);
+}
+.header__item + .header__item{
+    margin-left: 32px;
+}
+.header__item-link{
+    font-weight: 700;
+    line-height: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.923077px;
+    color: #83888F;
+    transition: all 0.4s linear;
+}
+.header__item-link:hover{
+    color: #333D4B;
+}
+.header__hamburger{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+}
+.header__ham-line{
+    display: inline-block;
+    width: 35px;
+    height: 3px;
+    background-color: #333;
+}
+.header__ham-line + .header__ham-line{
+    margin-top: 5px;
+}
+.rotate-dom{
+    opacity: 0;
+}
+.rotate{
+    transform: rotate(45deg) translateY(11px);
+}
+.rotate-return{
+    transform: rotate(-45deg) translateY(-10px);
+}
+.modal{
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 90px;
+    padding: 10px;
+    background-color:rgba(7, 7, 7);
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    animation: back 0.8s ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes back {
+    0%{
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.5) rotate(180deg);
+    }
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: scale(0.5) rotate(120deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.down{
+    animation: animate 0.8s ease-in-out;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+.modal__item + .modal__item {
+    margin-top: 10px;
+}
+.modal__item{
+    padding: 7px 0;
+}
+.modal__item:hover{
+
+    width: 100%;
+    background-color: #333;
+    padding: 7px 0;
+    border-radius: 10px;
+}
+.modal__item:hover .modal__link{
+    color: rgb(226, 210, 210);
+    
+}
+.modal__link{
+    color: rgb(213, 208, 208);
+}
+
+
+@media only screen and (max-width:700px){
+    .site-header{
+        padding: 40px 0;
+    }
+    .header__list{
+        display: none;
+    }
+    .header__hamburger{
+        display: flex;
+    }
+
+}
+@media only screen and (max-width:500px){
+    .site-header{
+       padding: 32px 0;
+    }
+    .modal{
+        width: 100%;
+    }
+}

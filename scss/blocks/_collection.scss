@@ -1,0 +1,110 @@
+.collection-section{
+    margin-bottom: 190px;
+}
+.collection__list{
+    padding-top: 262px;
+    @include center (space-between);
+    background-image: url("../../images/collection__bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 115px;
+}
+.collection__item{
+    width: 265px;
+    padding: 5px;
+    transition: all 0.5s linear;
+}
+.collection__item-img{
+    width: 100%;
+    height: 193px;
+}
+.collection__item-content{
+    margin-top: 72px;
+}
+.collection__item-title{
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    line-height: 32px;
+    font-size: 24px;
+    color: #333D4B;
+    text-align: center;
+}
+.collection__item-text{
+    margin-top: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    color: #333D4B;
+    opacity: 0.8;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:1110px){
+    .collection-section{
+        padding-bottom: 129px;
+    }
+    .collection__list{
+        padding-top: 203px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .collection__item{
+        width: 80%;
+        height: 193px;
+        @include center (space-between);
+    }
+    .collection__item + .collection__item{
+        margin-top: 40px;
+    }
+    .collection__item-content{
+        margin: 0;
+    }
+    .collection__item-img{
+        max-width: 263px;
+        width: 100%;
+    }
+    .collection__item-title{
+        line-height: 32px;
+        font-size: 24px;
+        text-align: left;
+    }
+    .collection__item-text{
+        font-weight: 400;
+        line-height: 25px;
+        font-size: 15px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:780px){
+    .collection__item{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:580px){
+    .collection__list{
+        padding-top: 205px;
+    }
+    .collection-section{
+        padding-bottom: 120px;
+    }
+    .collection__item{
+        flex-direction: column;
+    }
+    .collection__item + .collection__item{
+        margin-top: 150px;
+    }
+    .collection__item-title{
+        line-height: 32px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .collection__item-text{
+        margin-top: 16px;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+    }
+}

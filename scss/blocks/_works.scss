@@ -1,0 +1,39 @@
+.works-section{
+    padding-bottom: 200px;
+}
+.works__head-title{
+    margin-bottom: 80px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    line-height: 32px;
+    font-size: 24px;
+    color: #83888F;
+}
+.works__head-spans-line{
+    display: inline-block;
+    width: 70%;
+    height: 2px;
+    background-color: #FDD6BA;
+    @include center (space-between);
+}
+.works__head-span{
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    border: 2px solid #0E8784;
+    background: #FEFCF7;
+    border-radius: 50%;
+}
+
+
+.works__body{
+    margin-top: 67px;
+}
+.works__body-list{
+    width: 100%;
+    @include center (space-between);
+}
+.works__body-item{
+    width: 30%;
+}
+

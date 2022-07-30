@@ -7,6 +7,10 @@
 .header__logo-link{
     display: inline-block;
 }
+.header__logo-link img{
+    width: 236px;
+    height: 26px;
+}
 .header__list{
     @include center (none);
 }
@@ -120,11 +124,24 @@
     .header__hamburger{
         display: flex;
     }
+    .header__ham-line{
+        width: 25px;
+    }
+    .rotate{
+        transform: rotate(45deg) translateY(11px);
+    }
+    .rotate-return{
+        transform: rotate(-45deg) translateY(-11px);
+    }
 
 }
 @media only screen and (max-width:500px){
     .site-header{
        padding: 32px 0;
+    }
+    .header__logo-link img{
+        width: 163px;
+        height: 18px;
     }
     .modal{
         width: 100%;
